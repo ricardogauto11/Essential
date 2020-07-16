@@ -1,6 +1,15 @@
 "use strict"
 
-// Este es un mensaje de alerta
-alert('Hola desde un archivo externo :D')
+// Variables globales y locales
+var name = "Ricardo"
+console.log(name)
 
-console.log('Hola Consola!')
+function saludo() {
+    let name = "Juan"
+    console.log(name)
+
+    let edad = 34
+    console.log(edad)
+}
+
+saludo()
