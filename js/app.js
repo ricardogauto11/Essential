@@ -33,4 +33,11 @@ var edadtxt = String(edad)
 
 // Tipos de datos: Booleanos
 var estado = true // or false
-var estado = Boolean(10 > 9)
+var mayor = Boolean(10 < 9)
+
+// Tipos de datos: Fechas
+var fecha = new Date()
+console.log(fecha)
+console.log(fecha.getDay()) // Muestra el número del día
+console.log(fecha.getFullYear()) // Muestra el año
+console.log(fecha.getMinutes()) // Muestra los minutos de la hora corriente
