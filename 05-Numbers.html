@@ -14,14 +14,18 @@
         let b = new Number(20)
         let c = 3.1617
         let d = 77
+        let e = "10.50"
+
         console.log('El valor de a:', a)
         console.log('El valor de b:', b)
         console.log('El valor de c:', c)
+        console.log('El tipo de dato de e es: ', typeof e)
 
         console.log('*** Métodos ***')
         console.log('Aplicando "toFixed" para mostrar decimales ', c.toFixed(6))
         console.log('Convertimos el valor de "c" a Entero con parseInt: ', parseInt(c))
         console.log('Con parseFloat convertimos a un número flotante:', parseFloat(d))
+        console.log('Convertimos d a entero y lo sumamos a d: ', d + parseFloat(e))
     </script>
 </body>
 </html>
