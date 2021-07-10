@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Arrays</h2>
+
+    <script>
+        console.log('*** Arreglos: Son una colección de elementos de igual o diferente tipo ***')
+        console.log('Se los define asignando corchetes a la variable/constante:')
+
+        const empty = []
+        console.log(empty)
+        console.log('')
+
+        const full = [1, true, "Hola", ['a', 'b', 'c']]
+        console.log('El siguiente arreglo tiene', full.length, 'elementos.')
+        console.log(full)
+        console.log('Accedemos a la referencia del valor full[1]:', full[1])
+        console.log('Ahora accedemos a la referencia del último elemento del arreglo interno full[3][2]:', full[3][2])
+        console.log('')
+
+        console.log('*** Nuevas formas de crear Arreglos ***')
+        console.log('Array.of(elementos)')
+        const arr_of = Array.of('x', 'y', 'z', 10, 11, 12, ['o', 'k', false, true])
+        console.log(arr_of)
+        console.log('')
+
+        console.log('*** Creamos un arreglo y asignamos a todas sus posiciones el mismo valor ***')
+        console.log('Array(cantidad_de_elementos).fill(valor)')
+        const fill = Array(100).fill(true)
+        console.log(fill)
+        console.log('')
+
+        console.log('*** Métodos de los arreglos ***')
+        console.log('push(elemento) agrega un elemento al final de la colección.')
+        const primary = Array.of('red', 'yellow')
+        console.log(primary)
+        primary.push('blue')
+        console.log('Agregamos el color blue:');
+        console.log(primary)
+        console.log('')
+
+        console.log('Su contraparte es el método pop() que quita el último elemento del arreglo')
+        primary.pop()
+        console.log(primary)
+        console.log('')
+
+        console.log('*** Método funcional de los arreglos: forEach() ***')
+        console.log('A cada elemento del arreglo lo ubicamos en una <li> de html')
+        primary.forEach(function (e, i) {
+            console.log(`<li id="${i}">${e}</li>`)
+        })
+    </script>
+</body>
+</html>
