@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Functions</h2>
+
+    <script>
+        console.log('*** Funciones declaradas ***')
+        function thisIsAFunction() {
+            console.log('Puede invocarse en cualquier parte de nuestro código, incluso antes de ser declarada.');
+        }
+        // Invocamos a la función
+        thisIsAFunction()
+
+        function returningValue() {
+            let value = 10 + 50
+
+            return value;
+        }
+        console.log(returningValue())
+
+        console.log('*** Funciones con parámetros ***')
+        function greeting(name = 'Knowledge', age = 'infinitos') {
+            console.log(`Hola, mi nombre es ${name} y tengo ${age} años!`)
+        }
+        greeting("Richard", 31)
+
+        console.log('*** Misma función con parámetros por defecto *** ')
+        greeting()
+
+        console.log('*** Funciones expresadas ***')
+        const expressed = function () {
+            console.log('Se asignó la función como valor a  una constante. Si invocamos esta función antes de su declaración, JS nos dirá: "Uncaught ReferenceError: Cannot access expresed() before initialization"')
+        }
+        // Invocamos la función
+        expressed()
+    </script>
+</body>
+</html>
