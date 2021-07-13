@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Objetos</h2>
+
+    <script>
+        console.log('*** Objetos ***')
+        console.log('Creamos un objeto y lo mostramos:')
+        const js = {
+            birthdate: "04-12-1995",
+            creator: "Brendan Eich",
+            info: {
+                extension: ".js",
+                features: ['multiparadigm', 'functional programming', 'imperative', 'interpreted']
+            },
+            name: "Javascript",
+            obsolete: false,
+            version: function () {
+                console.log(`ECMAScript 2016; June 17 2016`)
+            },
+            greeting: function () {
+                console.log(`Hi! My creator is ${this.creator}`)
+            }
+        }
+        console.log(js)
+        console.log('')
+
+        console.log('Accedemos a sus propiedades con la notación objeto.propiedad:')
+        console.log('js.info.features')
+        console.log(js.info.features)
+        js.version()
+        js.greeting()
+    </script>
+</body>
+</html>
