@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essential</title>
+</head>
+<body>
+    <h2>
+        Fundamentos Javascript: Condicionales
+    </h2>
+
+    <script>
+        console.log('*** Estructura condicional ***')
+        console.log('Dependiendo de la hora, se muestra un saludo distinto.')
+        console.log(' ')
+
+        console.log('De 05hs a 13hs: Buenos días!')
+        console.log('De 13hs a 19hs: Buenas tardes!')
+        console.log('De 20hs a 04hs: Buenas noches!')
+        console.log('')
+
+        let time =  new Date()
+        let hours = time.getHours()
+        console.log('Son las', hours, 'hs')
+
+        if (hours >= 00 && hours < 05) {
+            console.log('Déjame dormir')
+        } else if (hours >= 05 && hours < 13) {
+            console.log('Buenos días')
+        } else if (hours >= 13 && hours < 20) {
+            console.log('Buenas tardes')
+        } else {
+            console.log('Buenas noches')
+        }
+
+        console.log('')
+        console.log('*** Operador ternario ***')
+        console.log('Tiene la forma (condición) ? verdadera : falsa')
+        let age = time.getFullYear() - 1990 
+        console.log('Tu edad es: ', age)
+
+        let major = (age < 18)
+                    ? "Eres menor de edad"
+                    : "Eres mayor de edad"
+        console.log(major)
+        console.log('')
+
+        console.log('*** Switch Case ***')
+        let day = time.getDay();
+        switch (day) {
+            case 0:
+                console.log('Domingo')
+                break
+            case 1:
+                console.log('Lunes')
+                break
+            case 2:
+                console.log('Martes')
+                break
+            case 3:
+                console.log('Miércoles')
+                break
+            case 4:
+                console.log('Jueves')
+                break
+            case 5:
+                console.log('Jueves')
+                break
+            case 6:
+                console.log('Viernes')
+                break
+            case 7:
+                console.log('Sábado')
+                break
+        }
+    </script>
+</body>
+</html>
