@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essential</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Manejo de errores</h2>
+    
+    <script>
+        console.log('*** Manejo de errores ***')
+        try {
+            console.log('En el try se agrega el código a evaluar')
+            notexists
+            console.log('Otro mensaje en el try')
+        } catch (error) {
+            console.log('Catch, captura el error surgido en el try')
+            console.log(error)
+        } finally {
+            console.log('El bloque finally se ejecuta siempre al final del bloque try-catch')
+        }
+        console.log('')
+
+        console.log('*** Mensaje de error personalizado ***')
+        try {
+            let number = 'y'
+
+            if (isNaN(number)) {
+                throw new Error("El caracter introducido no es un número")
+            }
+
+            console.log(number * number)
+        } catch (error) {
+            console.log(`Se produjo el siguiente error: ${error}`)
+        }
+    </script>
+</body>
+</html>
