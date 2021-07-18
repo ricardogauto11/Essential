@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascipt Essential</title>
+</head>
+<body>
+    <h2>Fundamentos Javascipt: Loops</h2>
+
+    <script>
+        console.log('*** Loops ***')
+        console.log('Nos permiten repetir un conjunto de sentencias controlado por una condición')
+        console.log('')
+
+        console.log('La sentencia while')
+        let counter = 1
+        while (counter <= 5) {
+            console.log('while:', counter)
+            counter += 2
+        }
+        console.log('')
+
+        console.log('*** La sentencia do while ***')
+        do {
+            console.log('do-while:', counter)
+            counter++
+        } while (counter <= 5)
+        console.log('')
+
+        console.log('*** El bucle for ***')
+        for (let i = 0; i < 10; i += 3) {
+            console.log('for:', i)
+        }
+        console.log('')
+
+        console.log('*** Recorriendo un arreglo con for ***')
+        let latam = ['Argentina', 'México', 'Paraguay', 'Brasil', 'Colombia', 'Chile', 'Uruguay', 'Bolivia', 'Perú', 'Venezuela']
+        for (let i = 0; i < latam.length; i++) {
+            console.log(latam[i])
+        }
+        console.log('')
+
+        console.log('*** ECMA Script 6: forin ***')
+        console.log('Nos permite recorrer las propiedades de un objeto')
+
+        const me = {
+            name: 'Ricardo',
+            lastname: 'Gauto',
+            birthdate: '11-06-1990',
+            age: 31
+        }
+        for (const property in me) {
+            if (Object.hasOwnProperty.call(me, property)) {
+                console.log(`Propiedad: ${property}. Valor: ${me[property]}`)
+            }
+        }
+        console.log('')
+
+        console.log('*** ECMA Script 6: forof ***')
+        console.log('Nos permite recorrer todos los elementos de cualquier objeto que sea iterable')
+        console.log('Para un arreglo de países:')
+        
+        for (const country of latam) {
+            console.log(country)
+        }
+        console.log('')
+        console.log('Para una cadena de texto:')
+        let greeting = "Hello world!"
+        for (const character of greeting) {
+            console.log(character)
+        }
+    </script>
+</body>
+</html>
