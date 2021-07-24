@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Destructuración</h2>
+
+    <script>
+        console.log('*** Destructuración ***')
+
+        console.log('Sin destructuring:')
+        const numbers = [1, 2, 3]
+        let uno = numbers[0],
+            dos = numbers[1]
+            tres = numbers[2];
+
+        console.log(uno, dos, tres)
+        console.log('')
+
+        console.log('Con destructuring:')
+        const person = {
+            name: 'Ricardo',
+            lastname: 'Gauto',
+            age: '31'
+        }
+
+        let {name, lastname, age} = person
+        console.log(name, lastname, age)
+    </script>
+</body>
+</html>
