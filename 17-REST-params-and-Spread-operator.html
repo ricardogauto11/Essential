@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Parámetros REST & Operador Spread</h2>
+
+    <script>
+        console.log('*** Parámetros REST ***')
+        console.log('Son un forma de agregar dinámicamente parámetros infinitos dentro de una función o variable.')
+
+        function add (a, b, ...c) {
+            let res = a + b
+
+            c.forEach(function (n) {
+                res += n
+            })
+
+            return res
+        }
+
+        console.log('Resultado sin paŕametros REST:', add(10, 1))
+        console.log('Con un parámetro:', add(10, 1, 23))
+        console.log('Con dos parámetros:', add(10, 1, 2, 5))
+        console.log('Con tres parámetros:', add(10, 1, 4, 9, 14))
+        console.log('Con cuatro parámetros:', add(10, 1, 5, 1, 23, 79))
+        console.log('')
+
+        console.log('*** Operador de propagación: Spread ***')
+        console.log('cuando tengamos que almacenar valores nos permite expandir una expresión.')
+        const arrOne = [0, 1, 2, 3, 4]
+        const arrTwo = [5, 6, 7, 8, 9]
+
+        console.log('Sumando dos arreglos sin Spread:')
+        const arrThree = [arrOne, arrTwo]
+        console.log(arrThree)
+        console.log('')
+
+        console.log('Sumando dos arreglos con Spread:')
+        const arrSpread = [...arrOne, ...arrTwo]
+        console.log(arrSpread)
+    </script>
+</body>
+</html>
