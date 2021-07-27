@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Funciones de flecha</h2>
+
+    <script>
+        console.log('*** Arrow Functions ***')
+        console.log('Es una nueva forma de definir funciones anónimas que sean expresadas.')
+        console.log('Cuando no se pasan parámetros, se usan los paréntesis. De lo contrario, se escriben el parámetro sin paréntesis.')
+        
+        const greeting = (name, lastname) => console.log(`Hello ${name} ${lastname}`)
+        greeting('Richard', 'Blown')
+
+        const add = (a, b) => a + b
+        console.log(add(2, 8))
+        console.log('')
+
+        const numbers = [1, 2, 3, 4, 5, 6]
+        numbers.forEach((el, i) => console.log(`${el} está en la posición ${i}`))
+        console.log('')
+
+        console.log('Las arrow functions capturan el contexto del objeto')
+        function dog () {
+            console.log(this)
+        }
+        dog()
+        console.log('')
+
+        const doggy = {
+            name: "Minnie",
+            bark() {
+                console.log(this)
+            },
+            eat: () => {
+                console.log(this)
+            }
+        }
+        doggy.bark()
+        doggy.eat()
+
+    </script>
+</body>
+</html>
