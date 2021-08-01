@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Prototipos</h2>
+
+    <script>
+        console.log('*** Prototipos ***')
+        const BugsBunny = {
+            name: 'Bugs Bunny',
+            sentence() {
+                console.log('Qué hay de nuevo, viejo?')
+            }
+        }
+
+        const LolaBunny = {
+            name: 'Lola Bunny',
+            sentence() {
+                console.log('No vuelvas a llamarme muñeca!')
+            }
+        } 
+        console.log(BugsBunny)
+        console.log(LolaBunny)
+        console.log('Si quisiera crear otro animal tendría que crear otro objeto y no es óptimo. Imagínate crear 50 animales con ese método (?)')
+        console.log('')
+        console.log('Así que vamos a hacerlo con Prototipos')
+
+        // Función constructora: Se crea una vez y se crean nuevas instancias/objetos que sean del tipo de esta función
+        // Una función en sí, gener un prototipo vacío
+        function LooneyTunes(name, year, creator) {
+            this.name = name
+            this.year = year
+            this.creator = creator
+        }
+
+        // Asignamos los métodos al prototipo
+        LooneyTunes.prototype.sentence = function () {
+            console.log('Pertenezco a Canciones lunáticas!')
+        }
+
+        LooneyTunes.prototype.greet = function () {
+            console.log(`Hola! me llamo ${this.name}`)
+        }
+
+        const PorkyPig = new LooneyTunes('Porky', '1935', 'Friz Freleng', '¡Eso es to... eso es to... e-eeesto es todo amigos!')
+        const Tweety = new LooneyTunes('Tweety', '1942', 'Robert Clampett', 'Me pareció ver un lindo gatito')
+
+        console.log(PorkyPig)
+        console.log(Tweety)
+
+        PorkyPig.sentence()
+        PorkyPig.greet()
+
+        Tweety.sentence()
+        Tweety.greet()
+    </script>
+</body>
+</html>
