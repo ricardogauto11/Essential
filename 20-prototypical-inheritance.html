@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial: Herencia Prototípica</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Herencia prototípica</h2>
+
+    <script>
+	console.log('*** Herencia prototípica ***')
+
+	// Función constructora donde asignamos los métodos al prototipo, no a la función como tal
+	function LooneyTunes(name, creator) {
+		this.name = name
+		this.creator = creator
+	}
+
+	// Métodos agregados al prototipo de la función constructora
+	LooneyTunes.prototype.greeting = function () {
+		console.log(`Hola! mi nombre es ${this.name}`)
+	}
+
+	LooneyTunes.prototype.author = function () {
+		console.log(`Mi creador es ${this.creator}`)
+	}
+
+	// Herencia Prototípica
+	function DaffyDuck(name, creator, phrase) {
+		this.super = LooneyTunes
+		this.super(name, creator)
+		this.phrase = phrase
+	}
+
+	// DaffyDuck está heredando de LooneyTunes
+	DaffyDuck.prototype = new LooneyTunes
+	DaffyDuck.prototype.constructor = DaffyDuck
+
+	const PorkyPig = new DaffyDuck('Porky Pig', 'Friz Freleng', '¡¡Eso es to... eso es to... e-eeeso es todo amigos!!')
+			LolaBunny = new LooneyTunes('Lola bunny', 'Herschel Weingrod', 'No vuelvas a llamarme muñeca')
+
+	console.log(PorkyPig)
+	console.log(LolaBunny)
+
+	PorkyPig.greeting()
+	PorkyPig.author()
+
+	LolaBunny.greeting()
+	LolaBunny.author()
+    </script>
+</body>
+</html>
