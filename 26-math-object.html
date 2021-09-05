@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: El objeto Math</h2>
+
+    <script>
+        console.log('*** El objeto Math ***')
+        console.log(Math)
+
+        console.log(`El número PI: ${Math.PI}`)
+        console.log('')
+        
+        console.log('Aplicamos funciones')
+        let number = -8.56,
+            x = 81,
+            y = 2
+        console.log(`Tenemos el número ${number}`)
+        console.log(`El valor absoluto de ${number} es ${Math.abs(number)}`)
+        console.log(`La función cielo es ${Math.ceil(number)}`)
+        console.log(`La función suelo es ${Math.floor(number)}`)
+        console.log(`Redondeo ${Math.round(number)}`)
+        console.log('')
+
+        console.log('Otras funciones')
+        console.log(`La raíz cuadrada de ${x} es ${Math.sqrt(x)}`)
+        console.log(`Elevamos ${y} a la potencia 3: ${Math.pow(y, 3)}`)
+        console.log(`El número ${number} es positivo?: ${Math.sign(number)}`)
+        console.log(`Número aleatorio entre 0 y 1000: ${Math.random() * 1000}`)
+        console.log(`Número aleatorio redondeado: ${Math.round(Math.random() * 1000)}`)
+    </script>
+</body>
+</html>
