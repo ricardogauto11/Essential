@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos de JavaScript: El objeto Date</h2>
+
+    <script>
+        console.log('*** El Constructor Date ***')
+        console.log(Date())
+        console.log('')
+
+        let date = new Date();
+        console.log(`La fecha es ${date.getDate()}`)
+        console.log(`El día es ${date.getDay()}`)
+        console.log(`El mes es ${date.getMonth()}`)
+        console.log(`El año es ${date.getFullYear()}`)
+        console.log(`La hora es ${date.getHours()} con ${date.getMinutes()} minutos y ${date.getSeconds()} segundos`)
+        console.log(`Mostrar solo la fecha ${date.toDateString()}`)
+        console.log(`En formato local ${date.toLocaleString()} `)
+        console.log(`Solo fecha ${date.toLocaleDateString()}`)
+        console.log(`Solo la hora ${date.toLocaleTimeString()}`)
+        console.log('')
+
+        console.log('Obteniendo datos del Meridiano de Greenwich')
+        console.log(`En Londres el día es ${date.getUTCDate()} y es la hora ${date.getUTCHours()}:${date.getUTCMinutes()}`)
+        console.log(`El timestamp de este preciso instante es ${Date.now()}`)
+    </script>
+</body>
+</html>
