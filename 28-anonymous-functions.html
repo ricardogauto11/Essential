@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos JavaScript: Funciones anónimas autoejecutables</h2>
+
+    <script>
+        console.log('*** Funciones anónimas autoejecutables ***')
+        console.log('Una función en la que se engloba el código a ejecutar')
+        console.log('');
+
+        // alert('hello world');
+        (function () {
+            let name = 'Rick'
+            console.log(`${name}`)
+        })();
+
+
+        (function (d, w, c) {
+            let name = 'Morty'
+            console.log(`${name}`)
+
+            c.log(d)
+            c.log(w)
+            c.log('Esto es un console.log')
+        })(document, window, console);
+
+        // Formas de escribir funciones anonimas autoejecutables
+        //Crockford (Javascript The Good parts)
+        ((function () {
+            console.log('Crockford version')
+        })());
+
+        // Unaria
+        +function () {
+            console.log('Unaria version')
+        }();
+
+        // Facebook
+        !function () {
+            console.log('Facebook version')
+        }();
+    </script>
+</body>
+</html>
