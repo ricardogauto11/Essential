@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Expresiones Regulares</h2>
+
+    <script>
+        console.log('*** Expresiones Regulares ***')
+        console.log('Son una secuencia de caracteres que conforman un patrón de búsqueda')
+        console.log('')
+
+        let lorem = 'Lorem ipsum dolor sit amet, consectetur adip dolor, sed diam nonumy ut odio 1000. Ut enim ad minim veniam, quis nostrud exercitation doloremque'
+        let regEx = new RegExp("lorem", "ig")
+        
+        console.log('test():', regEx.test(lorem))
+        console.log('exec():', regEx.exec(lorem))
+        console.log('')
+        
+        let regEx2 = /\d/ig
+        console.log('test():', regEx2.test(lorem))
+        console.log('exec():', regEx2.exec(lorem))
+    </script>
+</body>
+</html>
