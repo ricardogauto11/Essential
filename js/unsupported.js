@@ -1,0 +1,1 @@
+console.log('No soporta módulos import/export')
