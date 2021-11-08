@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Set</h2>
+
+    <script>
+        console.log(`*** El objeto Set ***`)
+        console.log(`Es un objeto que devuelve valores únicos, es decir que elimina los repetidos.`)
+
+        const elements = new Set([1, 2, true, 3, 3, 4, {}, 5,  6, {}, "JAVASCTIPT", "Javascript", false, true])
+        console.log(`Mostramos los elementos del objeto`, elements)
+        console.log(`Obtenemos su tamaño:`, elements.size)
+
+        console.log(`Para agrear elementos al objeto usamos el método add()`)
+        const colors = new Set()
+        colors.add('blue')
+        colors.add('red')
+        colors.add('yellow')
+        colors.add('blue')
+        colors.add('white')
+        colors.add('yellow')
+        colors.add('pink')
+
+        console.log(`~~~ Recorremos el objeto elements ~~~`)
+        for (const element of elements) {
+            console.log(element)
+        }
+
+        console.log(`~~~ Recorremos el objeto colors ~~~`)
+        colors.forEach((color) => console.log(color))
+        console.log('')
+
+        let arr = Array.from(elements)
+        console.log(arr[5])
+
+        console.log(`Para eliminar elementos usamos el método delete()`)
+        console.log(`Eliminamos el elemento 'Javascript'`)
+        elements.delete('Javascript')
+        console.log(elements)
+
+        console.log(`Para comprobar si un elemento exite en la colección de datos usamos el método has()`)
+        console.log(elements.has(2))
+
+        console.log(`Para limpiar la colección usamos el método clear()`)
+        colors.clear()
+        console.log(colors)
+    </script>
+</body>
+</html>
