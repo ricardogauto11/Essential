@@ -1,4 +1,4 @@
-// funciones asincronas
+// funciones asincronas: Esperan que una condición se cumpla para poder seguir ejecutando el proceso.
 
 function sqrtPromise(value) {
     if (typeof value !== 'number') {
