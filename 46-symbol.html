@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos Javascript: Symbol</h2>
+
+    <script>
+        console.log('Symbol')
+        console.log('Es un tipo de dato primitivo que fue introducido en el estándar ECMAScript 6')
+        console.log('Una vez que creamos un símbolo, su valor se va a mantener privado para uso interno.')
+        console.log('Suelen agregarse como características de objetos, como una propiedad y se van a mantener privadas.')
+        console.log('Una particularidad es que nos permiten crear identificadores únicos, de referencia.')
+
+        let id = Symbol('hola');
+        let id2 = Symbol('hola');
+
+        console.log('')
+        console.log(`id === id2:`, id === id2)
+        console.log(`El valor de id es`, id, `y de id2 es`, id2)
+        console.log('')
+
+        const name = Symbol('name')
+        const greeting = Symbol('greeting')
+        const person = {
+            [name]: "Rick",
+            age: 31
+        }
+
+        console.log(`Mostramos el objeto person:`, person)
+
+        person.name = "Elon Musk"
+        console.log(`Agregamos una propiedad 'name' al objeto person`, person)
+        console.log(`person.name:`, person.name)
+        console.log(`person.[name]:`, person[name])
+        
+        person[greeting] = function () {
+            console.log(`Hello world`)
+        }
+
+        // Invocamos a la función
+        person[greeting]()
+
+        console.log(`Recorremos las propiedades del objeto person`)
+        for (const prop in person) {
+            if (Object.hasOwnProperty.call(person, prop)) {
+                console.log(`Propiedad:`, prop)
+                console.log(`Valor de la propiedad:`, person[prop])
+                // Los symbols se mantienen privados
+            }
+        }
+
+        console.log(`Vemos la lista de symbols del objeto:`, Object.getOwnPropertySymbols(person))
+        </script>
+</body>
+</html>
