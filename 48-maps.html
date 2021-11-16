@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essencial</title>
+</head>
+<body>
+    <h2>Fundamentos de JavaScript</h2>
+
+    <script>
+        console.log('*** Maps ***')
+        console.log(`Son objetos cuyos elementos son clave: valor, al igual que un objeto primitivo `)
+
+        const obj = new Map()
+        console.log(`Para agregar valores usamos el método set()`)
+        obj.set("name", "Rick")
+        obj.set("surname", "Johnson")
+        obj.set("age", 31)
+        console.log(obj)
+
+        console.log('Para saber la cantidad de elementos del mapa, usamos el método size')
+        console.log(obj.size)
+
+        console.log('El método para evaluar si posee una llave es has("llave")')
+        console.log(obj.has('skills'))
+
+        console.log('Para obtener el valor de una llave utilizamos get("llave")')
+        console.log(obj.get('name'))
+
+        console.log('Para eliminar una propiedad utilizamos el método delete("llave")')
+        console.log(obj.delete('age'))
+        console.log(obj)
+
+        console.log('Recorriendo la colección con "for...of"')
+        for (const [key, value] of obj) {
+            console.log(`Llave: ${key}, Valor: ${value}`)
+        }
+
+        console.log('Hay otra forma de generar un Map')
+        const objtwo = new Map([
+            ["name", "Minnie"],
+            ["age", 8],
+            ["breed", "poodle"]
+        ])
+
+        console.log(objtwo)
+
+        console.log('Podemos guardar sólo las llaves y sólo los valores en un arreglo')
+        const keys = [...objtwo.keys()]
+        const values = [...objtwo.values()]
+
+        console.log(keys, values)
+    </script>
+</body>
+</html>
